@@ -37,3 +37,12 @@ h1 {
     display: flex;
     justify-content: space-evenly;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100vw;
+    background-color: #2B2B2B;
+    margin-top: auto;
+}
