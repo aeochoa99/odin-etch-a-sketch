@@ -26,8 +26,8 @@ h1 {
 .game-container {
     display: flex;
     flex-direction: column;
-    height: 60vh;
-    width: 55vw;
+    height: 70vh;
+    width: 50vw;
     border: solid 2px #9B1C1C;
     border-radius: 15px;
     background-color: #D62828;
@@ -36,6 +36,7 @@ h1 {
 .buttons {
     display: flex;
     justify-content: space-evenly;
+    padding: 10px;
 }
 
 .footer {
@@ -45,4 +46,16 @@ h1 {
     width: 100vw;
     background-color: #2B2B2B;
     margin-top: auto;
+}
+
+.grid {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 20px 20px 10px 20px;
+}
+
+.grid > div {
+    background-color: #D9D9D9;
+    border: 2px solid #C2C2C2;
 }
