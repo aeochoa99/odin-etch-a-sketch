@@ -10,3 +10,11 @@ function createGrid() {
 }
 
 createGrid();
+
+const cells = document.querySelectorAll(".grid > div");
+
+cells.forEach(cell => {
+    cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = "#3C3C3C";
+    })
+})
