@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector(".grid");
+const clearButton = document.querySelector("#clear");
 
 function createGrid() {
     for (let i = 0; i < 256; i++) {
@@ -18,3 +19,11 @@ cells.forEach(cell => {
         cell.style.backgroundColor = "#3C3C3C";
     })
 })
+
+function clearGrid() {
+    cells.forEach(cell => {
+        cell.style.backgroundColor = "#D9D9D9";
+    })
+}
+
+clearButton.addEventListener("click", clearGrid);
