@@ -11,26 +11,22 @@ function createGrid(gridSize) {
         const gridCell = document.createElement("div");
         gridCell.style.width = `calc(100% / ${gridSize})`;
         gridCell.style.height = `calc(100% / ${gridSize})`;
+        gridCell.className = "cell";
         gridContainer.appendChild(gridCell);
     }
 
-    const cells = document.querySelectorAll(".grid > div");
-
-    cells.forEach(cell => {
-    cell.addEventListener("mouseover", () => {
-        cell.style.backgroundColor = "#3C3C3C";
-    })
-})
 }
 
 function clearGrid() {
-    const cells = document.querySelectorAll(".grid > div");
+    const cells = document.querySelectorAll(".grid > .cell");
+
     cells.forEach(cell => {
         cell.style.backgroundColor = "#D9D9D9";
-    })
+    });
 }
 
 clearButton.addEventListener("click", clearGrid);
+
 createGridButton.addEventListener("click", () => {
     const getGridSize = Number(prompt("Enter a number for your grid size. (Max of 100)"));
 
@@ -41,4 +37,8 @@ createGridButton.addEventListener("click", () => {
     }
 })
 
-createGrid(16);
+gridContainer.addEventListener("mouseover", (event) => {
+    if (event.target.matches(".cell")) {
+        event.target.style.backgroundColor = "#3C3C3C";
+    }
+})
