@@ -30,7 +30,7 @@ clearButton.addEventListener("click", clearGrid);
 createGridButton.addEventListener("click", () => {
     const getGridSize = Number(prompt("Enter a number for your grid size. (Max of 100)"));
 
-    if (isNaN(getGridSize)) {
+    if (isNaN(getGridSize) || getGridSize > 100 || getGridSize < 1) {
         alert("Please enter a valid number.");
     } else {
         createGrid(getGridSize);
